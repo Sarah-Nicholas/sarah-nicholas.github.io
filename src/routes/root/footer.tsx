@@ -1,26 +1,30 @@
-import { Flex, HStack, Icon, Link, Spacer, Text } from '@chakra-ui/react'
-import { useState } from 'react'
+import {
+  Flex,
+  HStack,
+  Icon,
+  Link,
+  Spacer,
+  Text,
+  useColorModeValue,
+} from '@chakra-ui/react'
 import { IconType } from 'react-icons'
 
 import { FaLinkedin, FaTwitter } from 'react-icons/fa'
 
 export function Footer() {
+  const bg = useColorModeValue('rgba(255,255,255,0.8)', 'rgba(26, 32, 44, 0.8)')
   return (
-    // <Box w='full' px={4} py={2}>
-    <Flex align='center' px={4} py={2}>
-      <Text>Thank you for visiting my website :)</Text>
+    <Flex align='center' px={4} py={2} zIndex={1} bgColor={bg}>
+      <Text color='gray.400'>Thank you for visiting my website :)</Text>
       <Spacer />
-      <HStack>
+      <HStack align='bottom'>
         <SocialIcon as={FaTwitter} url='https://twitter.com/theroseinator_' />
         <SocialIcon
           as={FaLinkedin}
           url='https://www.linkedin.com/in/sarah-nicholas-82a059187/'
         />
-        {/* <Icon as={FaTwitter} boxSize={7} focusable /> */}
-        {/* <Icon as={FaLinkedin} boxSize={7} focusable /> */}
       </HStack>
     </Flex>
-    // </Box>
   )
 }
 
@@ -29,18 +33,11 @@ type SocialIcon = {
   url: string
 }
 function SocialIcon({ as, url }: SocialIcon) {
-  const [hovered, setHovered] = useState(false)
   return (
     <Link href={url} target='_blank'>
-      <Icon
-        as={as}
-        boxSize={7}
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
-        color={hovered ? 'gray.400' : undefined}
-        cursor='pointer'
-        focusable
-      />
+      <Icon as={as} boxSize={7} _hover={iconHover} cursor='pointer' focusable />
     </Link>
   )
 }
+
+const iconHover = { color: 'gray.400' }

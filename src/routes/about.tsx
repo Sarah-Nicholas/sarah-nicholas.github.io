@@ -3,18 +3,22 @@ import {
   Heading,
   Text,
   Box,
-  Button,
   Image,
   Flex,
   Spacer,
+  Link,
+  Icon,
+  List,
+  ListItem,
 } from '@chakra-ui/react'
+import { FaExternalLinkAlt } from 'react-icons/fa'
 
 import sarahNicholasAvatar from '../assets/sarah-nicholas.jpeg'
 
 export default function About() {
   return (
     <Center>
-      <Box maxW={['75vw', '60vw', '50vw']}>
+      <Box maxW={['75vw', '60vw']}>
         <Flex align='center'>
           <Heading>About me </Heading>
           <Spacer />
@@ -22,28 +26,71 @@ export default function About() {
             src={sarahNicholasAvatar}
             borderRadius='full'
             alt='Sarah Nicholas'
-            boxSize={[100, 150]}
+            boxSize={[100, 125, 150]}
           />
         </Flex>
-        <Text pb={2}>My name is Sarah 'OboeDaddy' Nicholas</Text>
         <Text pb={2}>
-          I am an Iowa-based Theatre Design graduate with an emphasis on
-          Costumes. I love painting and sewing and other hand crafts.
+          Sarah Rose Nicholas is an Iowa-based Theatre Design graduate with an
+          emphasis on costumes. She has a passion for design and fashion and she
+          loves painting, sewing, and just about all other hand crafts.
         </Text>
         <Text pb={2}>
-          Find me on Twitter at @theroseinator_ or on BlueSky at
-          @sarahnicholas.net
+          Her training includes costume design and repair; set design, building,
+          painting, and striking; hand and machine sewing; millinery; fashion
+          history; and theatre research and dramaturgy.
         </Text>
         <Text pb={2}>
-          Contact me{' '}
-          <Button
-            variant='link'
-            onClick={() => window.open('mailto:rosiered56@gmail.com')}
-          >
-            here
-          </Button>
+          Her hobbies include painting (acryllic & watercolor); embroidery;
+          clothing repair; and keeping up with the latest fashion news and
+          drama.
         </Text>
+        <Text pb={2}>
+          She is open to work (and open to relocate), above all looking for
+          creative work and environments.
+        </Text>
+        <Text pb={2}>Find her on the internet:</Text>
+        <List spacing={1} pl={2} pb={4}>
+          <ListItem>
+            Twitter:{' '}
+            <ExternalLink
+              url='https://twitter.com/theroseinator_'
+              text='@theroseinator_'
+            />
+          </ListItem>
+          <ListItem>
+            BlueSky:{' '}
+            <ExternalLink
+              url='https://staging.bsky.app/profile/sarahnicholas.net'
+              text='@sarahnicholas.net'
+            />
+          </ListItem>
+          <ListItem>
+            LinkedIn:{' '}
+            <ExternalLink
+              url='https://www.linkedin.com/in/sarah-nicholas-82a059187/'
+              text='Sarah Nicholas'
+            />
+          </ListItem>
+        </List>
+
+        <Text pb={2}>Contact Sarah for work or design inqueries:</Text>
+        <Link fontWeight='semibold' href='mailto:rosiered56@gmail.com'>
+          rosiered56@gmail.com
+        </Link>
       </Box>
     </Center>
+  )
+}
+
+type ExternalLink = {
+  url: string
+  text?: string
+}
+function ExternalLink({ url, text = url }: ExternalLink) {
+  return (
+    <Link href={url} isExternal>
+      {text}
+      <Icon pl={1} as={FaExternalLinkAlt} />
+    </Link>
   )
 }
