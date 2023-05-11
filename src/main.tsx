@@ -5,8 +5,10 @@ import Root from './routes/root'
 import { ChakraProvider } from '@chakra-ui/react'
 import { theme } from './theme'
 import ErrorPage from './error-page'
-import Index from './routes/index'
+import Index from './routes/home'
 import About from './routes/about'
+import Gallery from './routes/gallery'
+import { loader as galleryLoader } from './routes/gallery'
 
 const router = createBrowserRouter([
   {
@@ -18,7 +20,13 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
         children: [
           { index: true, element: <Index /> },
-          { path: '/about', element: <About /> },
+          { path: 'about', element: <About /> },
+          { path: 'gallery', element: <Gallery /> },
+          {
+            path: 'gallery/:projectId',
+            element: <Gallery.Page />,
+            loader: galleryLoader,
+          },
         ],
       },
     ],

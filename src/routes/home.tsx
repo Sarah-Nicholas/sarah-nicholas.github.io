@@ -1,5 +1,5 @@
 import { Box, Button, Center, Text } from '@chakra-ui/react'
-export default function Index() {
+export function Home() {
   return (
     <Center h='80vh'>
       <Box textAlign='center'>
@@ -12,3 +12,5 @@ export default function Index() {
     </Center>
   )
 }
+
+export default Home

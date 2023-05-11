@@ -1,10 +1,30 @@
-import { Center, Heading, Text, Box, Button } from '@chakra-ui/react'
+import {
+  Center,
+  Heading,
+  Text,
+  Box,
+  Button,
+  Image,
+  Flex,
+  Spacer,
+} from '@chakra-ui/react'
+
+import sarahNicholasAvatar from '../assets/sarah-nicholas.jpeg'
 
 export default function About() {
   return (
     <Center>
       <Box maxW={['75vw', '60vw', '50vw']}>
-        <Heading>About me</Heading>
+        <Flex align='center'>
+          <Heading>About me </Heading>
+          <Spacer />
+          <Image
+            src={sarahNicholasAvatar}
+            borderRadius='full'
+            alt='Sarah Nicholas'
+            boxSize={[100, 150]}
+          />
+        </Flex>
         <Text pb={2}>My name is Sarah 'OboeDaddy' Nicholas</Text>
         <Text pb={2}>
           I am an Iowa-based Theatre Design graduate with an emphasis on
