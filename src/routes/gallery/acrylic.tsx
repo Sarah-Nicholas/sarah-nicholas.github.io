@@ -10,7 +10,6 @@ import {
   Image,
   LinkBox,
   LinkOverlay,
-  Text,
 } from '@chakra-ui/react'
 import { FaAngleLeft } from 'react-icons/fa'
 import { Link } from 'react-router-dom'

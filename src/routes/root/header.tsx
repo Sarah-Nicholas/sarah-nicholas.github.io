@@ -7,7 +7,7 @@ import {
   SystemStyleObject,
   useColorModeValue,
 } from '@chakra-ui/react'
-import { NavLink, NavLinkProps } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const activeStyle: SystemStyleObject = {
   '&.active': { textDecoration: 'underline' },
@@ -37,5 +37,3 @@ export function Header() {
     </Flex>
   )
 }
-
-// const CustomNavLink = (props: NavLinkProps) => <NavLink className={({isActive}) => isActive ? 'active' : undefined} {...props}/>
