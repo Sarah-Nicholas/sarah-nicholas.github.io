@@ -1,5 +1,6 @@
 {
   "name": "sarah-nicholas.github.io",
+  "homepage": "https://sarahnicholas.net",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -29,6 +30,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
     "typescript": "^5.0.2",
-    "vite": "^4.3.2"
+    "vite": "^4.3.2",
+    "vite-tsconfig-paths": "^4.2.0"
   }
 }
