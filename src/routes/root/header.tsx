@@ -4,10 +4,14 @@ import {
   BreadcrumbLink,
   Flex,
   Heading,
+  SystemStyleObject,
   useColorModeValue,
 } from '@chakra-ui/react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, NavLinkProps } from 'react-router-dom'
 
+const activeStyle: SystemStyleObject = {
+  '&.active': { textDecoration: 'underline' },
+}
 export function Header() {
   const bg = useColorModeValue('rgba(255,255,255,0.8)', 'rgba(26, 32, 44, 0.8)')
   return (
@@ -15,17 +19,17 @@ export function Header() {
       <Heading>Sarah Nicholas</Heading>
       <Breadcrumb separator='-'>
         <BreadcrumbItem>
-          <BreadcrumbLink as={NavLink} to='/' end>
+          <BreadcrumbLink as={NavLink} to='/' sx={activeStyle} end>
             Home
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbItem>
-          <BreadcrumbLink as={NavLink} to='/gallery'>
+          <BreadcrumbLink as={NavLink} to='/gallery' sx={activeStyle}>
             Gallery
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbItem>
-          <BreadcrumbLink as={NavLink} to='/about' end>
+          <BreadcrumbLink as={NavLink} to='/about' end sx={activeStyle}>
             About
           </BreadcrumbLink>
         </BreadcrumbItem>
@@ -33,3 +37,5 @@ export function Header() {
     </Flex>
   )
 }
+
+// const CustomNavLink = (props: NavLinkProps) => <NavLink className={({isActive}) => isActive ? 'active' : undefined} {...props}/>
