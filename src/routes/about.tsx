@@ -32,7 +32,9 @@ export default function About() {
         <Text pb={2}>
           Sarah Rose Nicholas is an Iowa-based Theatre Design graduate with an
           emphasis on costumes. She has a passion for design and fashion and she
-          loves painting, sewing, and just about all other hand crafts.
+          loves painting, sewing, and just about all other hand crafts. She's
+          also passionate about being around plants and nature, and protecting
+          the environment.
         </Text>
         <Text pb={2}>
           Her training includes costume design and repair; set design, building,
@@ -42,11 +44,11 @@ export default function About() {
         <Text pb={2}>
           Her hobbies include painting (acryllic & watercolor); embroidery;
           clothing repair; and keeping up with the latest fashion news and
-          drama.
+          drama. She's also very fond of her many plants.
         </Text>
         <Text pb={2}>
           She is open to work (and open to relocate), above all looking for
-          creative work and environments.
+          creative work and environments, and good people.
         </Text>
         <Text pb={2}>Find her on the internet:</Text>
         <List spacing={1} pl={2} pb={4}>

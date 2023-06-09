@@ -7,7 +7,11 @@ export function Gallery() {
   return (
     <Center flexDirection='column'>
       <Heading pb={6}>Gallery</Heading>
-      <Stack direction={['column', 'row']} align={['center', 'flex-start']}>
+      <Stack
+        direction={['column', 'row']}
+        align={['center', 'flex-start']}
+        mx='2.5%'
+      >
         <Acrylic.Thumbnail w={['90%', '50%']} />
         <Watercolor.Thumbnail w={['90%', '50%']} />
       </Stack>

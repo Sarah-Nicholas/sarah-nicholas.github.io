@@ -14,9 +14,10 @@ import { FaAt, FaLinkedin, FaTwitter } from 'react-icons/fa'
 
 export function Footer() {
   const bg = useColorModeValue('rgba(255,255,255,0.8)', 'rgba(26, 32, 44, 0.8)')
+  const textColor = useColorModeValue('gray.600', 'gray.400')
   return (
     <Flex align='center' px={4} py={2} zIndex={1} bgColor={bg}>
-      <Text color='gray.400'>Thank you for visiting my website :)</Text>
+      <Text color={textColor}>Thank you for visiting my website :)</Text>
       <Spacer />
       <HStack alignItems='end'>
         <SocialIcon

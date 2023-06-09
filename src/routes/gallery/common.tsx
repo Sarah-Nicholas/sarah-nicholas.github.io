@@ -1,19 +1,25 @@
+import { PropsWithChildren } from 'react'
 import {
-  LinkBox,
-  LinkOverlay,
+  Box,
+  Flex,
+  Heading,
+  Icon,
   Image,
+  LinkBox,
+  LinkBoxProps,
+  LinkOverlay,
   Text,
   useColorModeValue,
-  LinkBoxProps,
 } from '@chakra-ui/react'
+import { FaAngleLeft } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
-export type GalleryImage = {
+export type GalleryThumbnail = {
   src: string
   id: string
   caption?: string
 } & LinkBoxProps
-export function GalleryImage({
+export function GalleryThumbnail({
   src,
   id,
   caption,
@@ -21,7 +27,7 @@ export function GalleryImage({
   borderColor: providedBorderColor,
   borderRadius,
   ...props
-}: GalleryImage) {
+}: GalleryThumbnail) {
   const borderColor = useColorModeValue('blackAlpha.200', 'whiteAlpha.200')
   const textColor = useColorModeValue('gray.600', 'gray.400')
   return (
@@ -38,5 +44,24 @@ export function GalleryImage({
         {caption}
       </Text>
     </LinkBox>
+  )
+}
+
+type GalleryPage = PropsWithChildren<{ heading: string }>
+export function GalleryPage({ heading, children }: GalleryPage) {
+  const textColor = useColorModeValue('gray.600', 'gray.400')
+  return (
+    <Box>
+      <LinkBox as={Flex} align='center' ml='5%' color={textColor}>
+        <Icon as={FaAngleLeft} />
+        <LinkOverlay as={Link} to='/gallery'>
+          Back
+        </LinkOverlay>
+      </LinkBox>
+      <Heading textAlign='center' pb={6}>
+        {heading}
+      </Heading>
+      {children}
+    </Box>
   )
 }

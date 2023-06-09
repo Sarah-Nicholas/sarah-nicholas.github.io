@@ -1,15 +1,5 @@
-import {
-  Box,
-  Flex,
-  HStack,
-  Heading,
-  Icon,
-  Image,
-  LinkBox,
-  LinkOverlay,
-  VStack,
-} from '@chakra-ui/react'
-import { GalleryImage } from './image'
+import { HStack, Image, VStack } from '@chakra-ui/react'
+import { GalleryPage, GalleryThumbnail } from './common'
 
 import george from 'assets/watercolor/george.jpeg'
 import hut from 'assets/watercolor/hut.jpeg'
@@ -17,27 +7,21 @@ import merlin from 'assets/watercolor/merlin.jpeg'
 import redHouses from 'assets/watercolor/red-houses.jpeg'
 import rhalf from 'assets/watercolor/rhalf.jpeg'
 import tentacles from 'assets/watercolor/tentacles.jpeg'
-import { Link } from 'react-router-dom'
-import { FaAngleLeft } from 'react-icons/fa'
 
-export function Thumbnail(props: Omit<GalleryImage, 'id' | 'src'>) {
+export function Thumbnail(props: Omit<GalleryThumbnail, 'id' | 'src'>) {
   return (
-    <GalleryImage src={hut} id='watercolor' caption='Watercolor' {...props} />
+    <GalleryThumbnail
+      src={hut}
+      id='watercolor'
+      caption='Watercolor'
+      {...props}
+    />
   )
 }
 
 export default function Watercolor() {
   return (
-    <Box>
-      <LinkBox as={Flex} align='center' ml='5%' color='gray.400'>
-        <Icon as={FaAngleLeft} />
-        <LinkOverlay as={Link} to='/gallery'>
-          Back
-        </LinkOverlay>
-      </LinkBox>
-      <Heading textAlign='center' pb={6}>
-        Watercolor
-      </Heading>
+    <GalleryPage heading='Watercolor'>
       <HStack align='flex-start' justify='center'>
         <VStack w='45%'>
           <Image
@@ -68,7 +52,7 @@ export default function Watercolor() {
           />
         </VStack>
       </HStack>
-    </Box>
+    </GalleryPage>
   )
 }
 Watercolor.Page = Watercolor
