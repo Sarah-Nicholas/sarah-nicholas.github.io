@@ -76,8 +76,8 @@ export default function About() {
         </List>
 
         <Text pb={2}>Contact Sarah for work or design inqueries:</Text>
-        <Link fontWeight='semibold' href='mailto:rosiered56@gmail.com'>
-          rosiered56@gmail.com
+        <Link fontWeight='semibold' href='mailto:thesarahnicholas@gmail.com'>
+          thesarahnicholas@gmail.com
         </Link>
       </Box>
     </Center>
