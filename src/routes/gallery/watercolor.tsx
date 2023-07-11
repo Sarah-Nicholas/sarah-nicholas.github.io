@@ -46,21 +46,36 @@ export default function Watercolor() {
             src={george}
             alt='Green and yellow beetle with a red-pink thorax; Named George, the Serious Beetle.'
           />
-          <Image src={bengi} alt='' />
+          <Image
+            src={bengi}
+            alt='Orange slug with a purple mug on his back with greens growing out.'
+          />
           <Image
             src={merlin}
             alt='Purple one-eyed fish with large yellow teeth and fleshy protrusion coming from the top of its head down in front of its face.'
           />
-          <Image src={mrButtons} alt='' />
-          <Image src={wistfulDuck} alt='' />
-          <Image src={headInClouds} alt='' />
+          <Image
+            src={mrButtons}
+            alt='Pink fuzzball with menacing eyes and long noodly legs and big pink boots; Pink paint splatter across his face and ahead of him. Named Mr. Buttons.'
+          />
+          <Image
+            src={wistfulDuck}
+            alt='A white duck wearing an orange hat, with head cocked at an art showing of a nebulous blue & green watercolor painting.'
+          />
+          <Image
+            src={headInClouds}
+            alt="Outline of a woman's face with purple, blue, and green clouds covering above her nose."
+          />
         </VStack>
         <VStack w='45%'>
           <Image
             src={hut}
             alt='Stone fairy hut with a yellow wood roof that has a red swirl, surrounded by rocks, red trees, and green plants.'
           />
-          <Image src={partyPenguin} alt='' />
+          <Image
+            src={partyPenguin}
+            alt='Penguin kicking legs forward and throwing arms back, surrounded by fluid orange & pink border.'
+          />
           <Image
             src={rhalf}
             alt='Blue rhino beetle with purple horn, and green, yellow, and red segmented legs.'
@@ -73,9 +88,18 @@ export default function Watercolor() {
             src={tentacles}
             alt='Pastel rainbow tentacles coming up from below, twisting amongst themselves.'
           />
-          <Image src={mrsButtons} alt='' />
-          <Image src={butterfly} alt='' />
-          <Image src={jeremy} alt='' />
+          <Image
+            src={mrsButtons}
+            alt='Orange fuzzball (with a bow) with long noodly legs ending in black high heels, walking up rainbow colored steps.'
+          />
+          <Image
+            src={butterfly}
+            alt='A minimalistic butterfly with orange watercolor wings.'
+          />
+          <Image
+            src={jeremy}
+            alt='A giant squid; orange on top that fades into blue at the tentacles, with bulbous, piercing blue eyes.'
+          />
         </VStack>
       </HStack>
     </GalleryPage>

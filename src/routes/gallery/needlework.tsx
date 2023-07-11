@@ -23,13 +23,28 @@ export default function Needlework() {
     <GalleryPage heading='Needlework'>
       <HStack align='flex-start' justify='center'>
         <VStack w='45%'>
-          <Image src={lake} alt='' />
-          <Image src={hippo} alt='' />
-          <Image src={bee} alt='' />
+          <Image
+            src={lake}
+            alt='Blue fabric with green hills in the background, a sandy beach in the foreground, felt and bead flowers, and a sailboat in the midground blue water.'
+          />
+          <Image
+            src={hippo}
+            alt='Gray fabric with felt ears and a snout shaped like a blushing hippo with a flower crown.'
+          />
+          <Image
+            src={bee}
+            alt='A bee on white fabric with a fuzzy punch needle body and straight-stitched wings.'
+          />
         </VStack>
         <VStack w='45%'>
-          <Image src={owl} alt='' />
-          <Image src={pig} alt='' />
+          <Image
+            src={owl}
+            alt='An orange owl with green plummage and yellow eyes, standing on a branch, with a blue background'
+          />
+          <Image
+            src={pig}
+            alt='Tan frabric with felt ears and a snout shaped like a pig with a daisy crown.'
+          />
         </VStack>
       </HStack>
     </GalleryPage>
