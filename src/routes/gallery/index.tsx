@@ -1,7 +1,8 @@
-import { Center, Heading, Stack } from '@chakra-ui/react'
+import { Center, Heading, Stack, VStack } from '@chakra-ui/react'
 import { useLoaderData, LoaderFunctionArgs } from 'react-router-dom'
 import Acrylic from './acrylic'
 import Watercolor from './watercolor'
+import Needlework from './needlework'
 
 export function Gallery() {
   return (
@@ -12,7 +13,10 @@ export function Gallery() {
         align={['center', 'flex-start']}
         mx='2.5%'
       >
-        <Acrylic.Thumbnail w={['90%', '50%']} />
+        <VStack w={['90%', '50%']}>
+          <Acrylic.Thumbnail />
+          <Needlework.Thumbnail />
+        </VStack>
         <Watercolor.Thumbnail w={['90%', '50%']} />
       </Stack>
     </Center>
@@ -25,6 +29,7 @@ export default Gallery
 const PageDictionary: Record<string, () => JSX.Element> = {
   acrylic: Acrylic.Page,
   watercolor: Watercolor.Page,
+  needlework: Needlework.Page,
 }
 export function loader({ params }: LoaderFunctionArgs) {
   console.log(params)
